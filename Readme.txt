@@ -1,5 +1,7 @@
 The adaptive Neural Network Library (MATLAB® 5.3.1 and later) is a collection of blocks that implement several Adaptive Neural Networks featuring different adaptation algorithms.
 
+You can download this library also from File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/976-ann
+
 It was developed mainly in June-July 2001 by Giampiero Campa (West Virginia University) and Mario Fravolini (Perugia University). Later improvements were partially supported by the NASA Grant NCC5-685.
 
 There are blocks that implement basically these kinds of neural networks:
