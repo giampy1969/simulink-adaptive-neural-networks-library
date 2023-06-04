@@ -23,7 +23,7 @@ INSTALLATION:
 Unzip the file in a folder of choice, usually under the "toolbox" folder
 under the Matlab main installation folder.
 
-From Matlab, open the "Set Path" interface from the "File" menu,
+From MATLAB®, open the "Set Path" interface from the "File" menu,
 and use the "Add with Subfolders" feature to add the new folder 
 to the matlab path. Then Save and exit the Set Path dialog box.
 
@@ -31,7 +31,7 @@ to the matlab path. Then Save and exit the Set Path dialog box.
 
 HOW TO USE THE LIBRARY:
 
-From matlab, use the command "ann" to open the library, and double click 
+From MATLAB, use the command "ann" to open the library, and double click 
 on the "ann demo" block to open the main demo. This should open a simulink 
 scheme capable of running "out of the box" with any matlab version from
 R11 to R2007a, that is from Matlab 5.3 to 7.4.
