@@ -1,0 +1,101 @@
+
+   HOW TO TRAIN THE NONLINEAR (GRBF) NETWORK
+   --------------------------------------------
+   
+   First, you should load the data file: 
+
+   >> load choles_all
+
+      This is an example data file which is included also 
+      in the neural network toolbox. It contains 264 data points representing
+      a function with 21 inputs and 3 outputs. We will use this just as an example,
+      so when you are able to understand the training process you could
+      load any data file at this point. 
+
+   Now let's use the first half as training data:
+
+   >> t=t(:,1:130);p=p(:,1:130);
+
+   and calculate maximum and minimum for normalization:
+
+   >> mindata=min([t' p']);maxdata=max([t' p']);
+
+   Then, open the scheme chlnet and make sure that:
+
+   1) the learning switch for the neural network is on 
+   2) the initial condition for the network is initially set to
+      zeros(((21+2)*100+2)*3,1) where 21 is the number of inputs 
+      3 is the number of outputs, and 100 is the max number of neurons. 
+      You can decide here or later what is the max number of neurons 
+      and change the Nmax and Initial Conditions parameters accordingly.
+   3) the Center Distance parameter should be initially set to [0.6  0.6  1].
+   
+   At this point, you can just run the simulation.
+   When the sim is over, use the command:
+   
+   >> figure; for i=1:3; subplot(3,1,i);plot(W(:,((21+2)*100+2)*i-1)); end
+   
+   to plot the number of added neurons for each output.   
+   The final number of neurons should not be more than one third of the 
+   neurons available, in this case 33, if they are already more than that
+   you should increase the center distance to something like [0.7  0.7  1] 
+   and retry, another option would be to increase the  max number of neurons.
+
+   You can also use the following lines to plot estimates vs nominal values:
+   
+   >> figure;for i=1:3;subplot(3,1,i);plot([est(:,i) nom(:,i)]);end
+
+   and the following to calculate the root mean square error for each target:
+
+   for i=1:3,
+       per_rms=100*sqrt((est(:,i)-nom(:,i)).^2)./(ones(length(est),1)*(max(nom(:,i))-min(nom(:,i))));
+       mean_per_rms=mean(per_rms)    
+   end;
+
+   Now, set the initial condition to W(end,:) and rerun the simulation.
+   In this way, the network uses the last set of weights for the new simulation.
+   
+   After the simulation, you should notice that the RMS error decreased
+   a little, and some more (just a few) neurons have been added.
+   Again, if the neuron are maxed out you need to increase either 
+   the center distance or the max number of neurons and redo the 
+   nonlinear training from scratch.
+
+   Redo the simulation again and again until the RMS stops decreasing
+   in a noticeable way. When it does, if you are satisfied with the approximation,
+   then you can stop and save the weights with the commands:
+
+   >> W=W(end,:);
+   >> save chl_W W
+
+   If you are not yet satisfied with the approximation, then decrease 
+   the center distance to [0.5 0.5 1] and redo a bunch of simulations,
+   always making sure that the number of neurons stays below the maximum.
+  
+   You can repeat the above steps, a number of times, until the center
+   distance is [0.3 0.3 1] or [0.2 0.2 1]. At that time it is usually
+   better to stop it anyways since there are rarely any improvements.
+
+   After saving the weights, the real test for the approximation is
+   whether it can successfully reproduce the output for the validation data set:
+
+   >> load choles_all
+
+   We can use the remaining data for validation:
+
+   >> t=t(:,131:end);p=p(:,131:end);
+
+   and load the maximum, minimum and weights:
+
+   >> load chl_W
+
+   At this point:
+
+   1) open chlnet and make sure the learning switch is off
+   2) make sure the green network has W(end,:) as initial condition
+   3) Run the scheme and plot the results
+
+   Results should be only slighly worst than the ones on the training data.
+
+   --------------------------------------------
+   Giampy - December 07

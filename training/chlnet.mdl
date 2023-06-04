@@ -1,0 +1,754 @@
+Model {
+  Name			  "chlnet"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "1"
+  StopTime		  "length(t)"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[0:50:3900]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "35*50"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWOptions		  "-aEnforceIntegerDowncast=1 -aFoldNonRolledExpr=1 -a"
+"InlineInvariantSignals=1 -aInlineParameters=0 -aLocalBlockOutputs=1 -aRollThr"
+"eshold=5 -aZeroInternalMemoryAtStartup=1 -aZeroExternalMemoryAtStartup=1 -aIn"
+"itFltsAndDblsToZero=1 -aGenerateReport=0 -aGenCodeOnly=0 -aRTWVerbose=1 -aInc"
+"ludeHyperlinkInReport=0 -aLaunchReport=0 -aForceParamTrailComments=0 -aGenera"
+"teComments=1 -aIgnoreCustomStorageClasses=1 -aIncHierarchyInIds=0 -aMaxRTWIdL"
+"en=31 -aShowEliminatedStatements=0 -aPrefixModelToSubsysFcnNames=1 -aIncDataT"
+"ypeInIds=0 -aInsertBlockDesc=0 -aSimulinkBlockComments=1 -aInlinedPrmAccess="
+"\"Literals\"  -aSuppressErrorStatus=0 -aModelReferenceCompliant=1 -aSupportNo"
+"nInlinedSFcns=1 -aSupportContinuousTime=1 -aSupportComplex=1 -aSupportNonFini"
+"te=1 -aSupportAbsoluteTime=1 -aTargetFcnLib=\"ansi_tfl_tmw.mat\" -aMultiInsta"
+"nceERTCode=0 -aLogVarNameModifier=\"rt_\" -aIsPILTarget=0 -aCombineOutputUpda"
+"teFcns=0 -aGenerateASAP2=0 -aGenerateSampleERTMain=0 -aGenerateFullHeader=1 -"
+"aUtilityFuncGeneration=\"Auto\" -aIncludeFileDelimiter=\"Auto\" -aIncludeMdlT"
+"erminateFcn=1 -aPurelyIntegerCode=0 -aERTCustomFileBanners=0 -aRTWCAPIStates="
+"0 -aRTWCAPIParams=0 -aRTWCAPISignals=0 -aMatFileLogging=1 -aGenFloatMathFcnCa"
+"lls=\"ANSI_C\" -aExtModeMexFile=\"ext_comm\" -aExtModeTransport=0 -aExtModeSt"
+"aticAllocSize=1000000 -aExtModeTesting=0 -aExtModeStaticAlloc=0 -aExtMode=0  "
+"-aInitFltsAndDblsToZero=1 -aInitFltsAndDblsToZero=1 -aInitFltsAndDblsToZero=1"
+" "
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Tue Dec 12 15:20:48 2000"
+  Creator		  "Giampy"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "campa"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Feb 13 20:03:50 2008"
+  ModelVersionFormat	  "1.%<AutoIncrement:442>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "chlnet"
+    Location		    [80, 362, 843, 604]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [360, 161, 385, 179]
+      ShowName		      off
+      Value		      "1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "DISABLED1"
+      Position		      [360, 181, 385, 199]
+      ShowName		      off
+      Value		      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Double click here to load\nmodel and control\n"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [115, 24, 181, 51]
+      ForegroundColor	      "magenta"
+      DropShadow	      on
+      ShowName		      off
+      OpenFcn		      "load choles_all;t=t(:,1:130);p=p(:,1:130);minda"
+"ta=min([t' p']);maxdata=max([t' p']);W=zeros(1,((21+2)*100+2)*3);"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Training\\nData')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Double click here to load\nmodel and control"
+"\n"
+	Location		[18, 441, 149, 496]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Double click here to load\nmodel and control\n1"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [30, 24, 95, 49]
+      ForegroundColor	      "green"
+      DropShadow	      on
+      ShowName		      off
+      OpenFcn		      "edit('training.txt')"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Readme')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Double click here to load\nmodel and control"
+"\n1"
+	Location		[798, 124, 924, 311]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Double click here to load\nmodel and control\n2"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [200, 24, 266, 51]
+      ForegroundColor	      "magenta"
+      DropShadow	      on
+      ShowName		      off
+      OpenFcn		      "load choles_all; t=t(:,131:end);p=p(:,131:end);"
+" load chl_W"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Validation\\nData')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Double click here to load\nmodel and control"
+"\n2"
+	Location		[18, 441, 149, 496]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+      }
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From Workspace1"
+      Position		      [30, 78, 120, 102]
+      VariableName	      "[[1:length(t)]' t' p']"
+      SampleTime	      "1"
+      Interpolate	      on
+      HoldFinalValue	      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "GRBF"
+      Ports		      [3, 2, 0, 0, 0]
+      Position		      [465, 115, 535, 195]
+      SourceBlock	      "ann/GRBF"
+      SourceType	      "GRBF NN"
+      dim		      "[21 3]"
+      nwrap		      "[100   0.4         1e10           1]"
+      eta		      "[0.0001 0.0001 0.0001]"
+      gam		      "[1e-6 1e-6 1e-6]*0"
+      lim		      "[1e9 1e9 1e9]"
+      e1		      "0.1"
+      e2		      "[0.6  0.6  1]"
+      e3		      "[0.02 0.5]"
+      x0		      "W(end,:) % zeros(((21+2)*100+2)*3,1) % "
+      T			      "1"
+      Port {
+	PortNumber		1
+	Name			"nyn"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "Save Nominal Data"
+      Position		      [175, 122, 210, 138]
+      ForegroundColor	      "gray"
+      ShowName		      off
+      VariableName	      "nom"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Scale in"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [165, 76, 210, 104]
+      ForegroundColor	      "blue"
+      ShowPortLabels	      on
+      MaskType		      "Scale"
+      MaskDescription	      "   Scales the input vector x, ranging from xmin"
+" to xmax,\n   to an output vector y, ranging from ymin to ymax"
+      MaskHelp		      "   Scales the input vector x, ranging from xmin"
+" to xmax,\n   to an output vector y, ranging from ymin to ymax"
+      MaskPromptString	      "x min|x max|y min|y max"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskVariables	      "xmin=@1;xmax=@2;ymin=@3;ymax=@4;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "mindata|maxdata|-ones(size(mindata))|ones(size("
+"maxdata))"
+      System {
+	Name			"Scale in"
+	Location		[61, 118, 681, 300]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [70, 48, 100, 62]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [190, 31, 380, 79]
+	  Gain			  "(ymax-ymin)./(xmax-xmin)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [135, 45, 155, 65]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [435, 45, 455, 65]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const x"
+	  Position		  [70, 89, 120, 121]
+	  Value			  "xmin"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const y"
+	  Position		  [380, 89, 430, 121]
+	  Value			  "ymin"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [480, 48, 510, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "const x"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "const y"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Scale out"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [620, 122, 665, 148]
+      ForegroundColor	      "blue"
+      ShowPortLabels	      on
+      MaskType		      "Scale"
+      MaskDescription	      "   Scales the input vector x, ranging from xmin"
+" to xmax,\n   to an output vector y, ranging from ymin to ymax"
+      MaskHelp		      "   Scales the input vector x, ranging from xmin"
+" to xmax,\n   to an output vector y, ranging from ymin to ymax"
+      MaskPromptString	      "x min|x max|y min|y max"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskVariables	      "xmin=@1;xmax=@2;ymin=@3;ymax=@4;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "-ones(1,3)|ones(1,3)|mindata(1:3)|maxdata(1:3)"
+      System {
+	Name			"Scale out"
+	Location		[61, 118, 681, 300]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [70, 48, 100, 62]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [190, 31, 380, 79]
+	  Gain			  "(ymax-ymin)./(xmax-xmin)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [135, 45, 155, 65]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [435, 45, 455, 65]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const x"
+	  Position		  [70, 89, 120, 121]
+	  Value			  "xmin"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const y"
+	  Position		  [380, 89, 430, 121]
+	  Value			  "ymin"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [480, 48, 510, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "const y"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "const x"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Selector
+      Name		      "Selector10"
+      Position		      [260, 144, 305, 166]
+      ShowName		      off
+      Elements		      "1:3"
+      InputPortWidth	      "24"
+    }
+    Block {
+      BlockType		      Selector
+      Name		      "Selector9"
+      Position		      [260, 118, 305, 142]
+      ShowName		      off
+      Elements		      "4:24"
+      InputPortWidth	      "24"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [330, 145, 350, 165]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Switch"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [410, 162, 440, 198]
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace16"
+      Position		      [560, 167, 585, 183]
+      ShowName		      off
+      VariableName	      "W"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace39"
+      Position		      [690, 126, 720, 144]
+      ForegroundColor	      "gray"
+      ShowName		      off
+      VariableName	      "est"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "1"
+      SaveFormat	      "Matrix"
+    }
+    Line {
+      SrcBlock		      "From Workspace1"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, 40]
+	DstBlock		"Save Nominal Data"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Scale in"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Scale in"
+      SrcPort		      1
+      Points		      [15, 0; 0, 40]
+      Branch {
+	DstBlock		"Selector9"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 25]
+	DstBlock		"Selector10"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Selector10"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Selector9"
+      SrcPort		      1
+      DstBlock		      "GRBF"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Scale out"
+      SrcPort		      1
+      DstBlock		      "To Workspace39"
+      DstPort		      1
+    }
+    Line {
+      Name		      "nyn"
+      Labels		      [0, 0]
+      SrcBlock		      "GRBF"
+      SrcPort		      1
+      Points		      [55, 0]
+      Branch {
+	Points			[0, 85; -255, 0]
+	DstBlock		"Sum5"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Scale out"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "GRBF"
+      SrcPort		      2
+      DstBlock		      "To Workspace16"
+      DstPort		      1
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "Switch"
+      DstPort		      1
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "DISABLED1"
+      SrcPort		      1
+      DstBlock		      "Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      DstBlock		      "GRBF"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Switch"
+      SrcPort		      1
+      DstBlock		      "GRBF"
+      DstPort		      3
+    }
+    Annotation {
+      Position		      [601, 167]
+    }
+    Annotation {
+      Position		      [499, 37]
+      HorizontalAlignment     "left"
+      Text		      "run chlplots to visualize results \nafter the s"
+"imulation ends"
+    }
+    Annotation {
+      Position		      [299, 37]
+      HorizontalAlignment     "left"
+      Text		      "Load data by double clcking on either \nthe tra"
+"ining or validation button"
+    }
+  }
+}
