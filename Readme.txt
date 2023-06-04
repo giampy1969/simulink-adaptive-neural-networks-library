@@ -1,3 +1,22 @@
+The adaptive Neural Network Library (MATLAB® 5.3.1 and later) is a collection of blocks that implement several Adaptive Neural Networks featuring different adaptation algorithms.
+
+It was developed mainly in June-July 2001 by Giampiero Campa (West Virginia University) and Mario Fravolini (Perugia University). Later improvements were partially supported by the NASA Grant NCC5-685.
+
+There are blocks that implement basically these kinds of neural networks:
+
+Adaptive Linear Networks (ADALINE)
+
+Multilayer Layer Perceptron Networks
+
+Generalized Radial Basis Functions Networks
+
+Dynamic Cell Structure (DCS) Networks with gaussian or conical basis functions
+
+Also, a Simulink example regarding the approximation of a scalar nonlinear function is included.
+
+Finally, the folder "training" includes step by step instrucions on how to train the GRBF network and the supporting example.
+
+
 CONTENTS:
 
 -------------------------------------------------------------------------
