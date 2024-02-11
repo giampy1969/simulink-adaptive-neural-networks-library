@@ -1,20 +1,19 @@
-The adaptive Neural Network Library (MATLAB® 5.3.1 and later) is a collection of blocks that implement several Adaptive Neural Networks featuring different adaptation algorithms.
+# simulink-adaptive-neural-networks-library
+Simulink&reg; blocks implementing adaptive neural networks
 
 [![View smxl on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/976-ann)
 
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=giampy1969/simulink-adaptive-neural-networks-library)
 
+The adaptive Neural Network Library (MATLAB® 5.3.1 and later) is a collection of blocks that implement several Adaptive Neural Networks featuring different adaptation algorithms.
+
 It was developed mainly in June-July 2001 by Giampiero Campa (West Virginia University) and Mario Fravolini (Perugia University). Later improvements were partially supported by the NASA Grant NCC5-685.
 
-There are blocks that implement basically these kinds of neural networks:
-
-Adaptive Linear Networks (ADALINE)
-
-Multilayer Layer Perceptron Networks
-
-Generalized Radial Basis Functions Networks
-
-Dynamic Cell Structure (DCS) Networks with gaussian or conical basis functions
+-) There are blocks that implement basically these kinds of neural networks:
+-) Adaptive Linear Networks (ADALINE)
+-) Multilayer Layer Perceptron Networks
+-) Generalized Radial Basis Functions Networks
+-) Dynamic Cell Structure (DCS) Networks with gaussian or conical basis functions
 
 Also, a Simulink example regarding the approximation of a scalar nonlinear function is included.
 
